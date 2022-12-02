@@ -10,7 +10,7 @@ input
   .split("\n")
   .map((round) => round.split(" "))
   .map((round) =>
-    round = [Game.actionToWord(round[0]), Game.actionToWord(round[1])]
+    round = [Game.letterToAction(round[0]), Game.letterToAction(round[1])]
   )
   .forEach((round) => {
     const outcome = Game.evalOutcome(round[1], round[0]); // first is opponent, second is player

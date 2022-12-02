@@ -1,7 +1,7 @@
+// can probably be done better
 type Action = "Rock" | "Paper" | "Scissors";
 type Outcome = "tied" | "won" | "lost";
 
-// can probably be done better
 const evalOutcome = (player: Action, opponent: Action): Outcome => {
   if (player === opponent) {
     return "tied";
@@ -32,9 +32,26 @@ const evalActionScore = (action: Action): number => {
   }
 };
 
-const actionToWord = (action: string): Action =>
-  action === "A" ? "Rock" : (action === "B" ? "Paper" : "Scissors");
+const letterToAction = (letter: string): Action =>
+  letter === "A" ? "Rock" : (letter === "B" ? "Paper" : "Scissors");
 
-export type { Action };
+const letterToOutcome = (letter: string): Outcome =>
+  letter === "X" ? "lost" : (letter === "Y" ? "tied" : "won");
 
-export { actionToWord, evalActionScore, evalOutcome, evalOutcomeScore };
+const getWinAction = (action: Action): Action =>
+  action === "Rock" ? "Paper" : (action === "Paper" ? "Scissors" : "Rock");
+
+const getLossAction = (action: Action): Action =>
+  action === "Rock" ? "Scissors" : (action === "Paper" ? "Rock" : "Paper");
+
+export type { Action, Outcome };
+
+export {
+  evalActionScore,
+  evalOutcome,
+  evalOutcomeScore,
+  getLossAction,
+  getWinAction,
+  letterToAction,
+  letterToOutcome,
+};
