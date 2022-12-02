@@ -2,35 +2,18 @@
 type Action = "Rock" | "Paper" | "Scissors";
 type Outcome = "tied" | "won" | "lost";
 
-const evalOutcome = (player: Action, opponent: Action): Outcome => {
-  if (player === opponent) {
-    return "tied";
-  }
-  if (player === "Rock" && opponent === "Scissors") {
-    return "won";
-  }
-  if (player === "Paper" && opponent === "Rock") {
-    return "won";
-  }
-  if (player === "Scissors" && opponent === "Paper") {
-    return "won";
-  }
-  return "lost";
-};
+const evalOutcome = (player: Action, opponent: Action): Outcome =>
+  player === opponent ? "tied" : player === "Rock" && opponent === "Scissors" ||
+      player === "Paper" && opponent === "Rock" ||
+      player === "Scissors" && opponent === "Paper"
+    ? "won"
+    : "lost";
 
 const evalOutcomeScore = (outcome: Outcome): number =>
   outcome === "won" ? 6 : (outcome === "tied" ? 3 : 0);
 
-const evalActionScore = (action: Action): number => {
-  switch (action) {
-    case "Rock":
-      return 1;
-    case "Paper":
-      return 2;
-    case "Scissors":
-      return 3;
-  }
-};
+const evalActionScore = (action: Action): number =>
+  action === "Rock" ? 1 : (action === "Paper" ? 2 : 3);
 
 const letterToAction = (letter: string): Action =>
   letter === "A" ? "Rock" : (letter === "B" ? "Paper" : "Scissors");
