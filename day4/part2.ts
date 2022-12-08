@@ -8,8 +8,8 @@ const strRange = input.map((line) => line.split(","));
 const numRange = strRange.map((pair) => pair.map(rangeToSeq));
 
 const overlap = numRange.filter((pair) =>
-  pair[0].every((n) => pair[1].includes(n)) ||
-  pair[1].every((n) => pair[0].includes(n))
+  pair[0].filter((n) => pair[1].includes(n)).length > 0 ||
+  pair[1].filter((n) => pair[0].includes(n)).length > 0
 );
 
 console.log(overlap.length);
