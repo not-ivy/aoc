@@ -3,6 +3,7 @@
     "lineWidth": 100
   },
   "tasks": {
-    "run": "deno run --allow-read run.ts"
+    "run": "deno run --allow-read run.ts",
+    "bench": "deno bench --allow-read ./*/bench.ts"
   }
 }
