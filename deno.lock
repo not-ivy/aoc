@@ -1,0 +1,12 @@
+{
+  "version": "3",
+  "redirects": {
+    "https://esm.sh/v135/@types/minimist@~1.2/index.d.ts": "https://esm.sh/v135/@types/minimist@1.2.5/index.d.ts"
+  },
+  "remote": {
+    "https://deno.land/std@0.208.0/dotenv/load.ts": "0636983549b98f29ab75c9a22a42d9723f0a389ece5498fe971e7bb2556a12e2",
+    "https://deno.land/std@0.208.0/dotenv/mod.ts": "039468f5c87d39b69d7ca6c3d68ebca82f206ec0ff5e011d48205eea292ea5a6",
+    "https://esm.sh/minimist@1.2.8": "ca17e106008cd7805d5722221d055a6d935798803eb2d776caf296b5a0307125",
+    "https://esm.sh/v135/minimist@1.2.8/denonext/minimist.mjs": "50d18960060e8fbca3f7edbf9425d30085c5e9696a47359707908124ba6275b8"
+  }
+}
