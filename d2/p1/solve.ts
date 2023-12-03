@@ -5,9 +5,9 @@ interface Bag {
 }
 
 export default {
-  solve(file: string) {
+  solve(input: string) {
     const regex = /(?<num>\d+) (?<color>(?:red|green|blue))(?<end>(?:.|$))/g;
-    return file
+    return input
       .split("\n")
       .map((line) =>
         [...line.matchAll(regex)]

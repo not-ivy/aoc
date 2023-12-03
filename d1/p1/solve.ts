@@ -1,6 +1,6 @@
 export default {
-  solve(file: string) {
-    return file
+  solve(input: string) {
+    return input
       .split("\n")
       .map((line) => line.match(/(\d)/g))
       .map((line) => line = [line![0], line!.at(-1) ?? line![0]])
