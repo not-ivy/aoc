@@ -1,0 +1,20 @@
+capture num {
+  some of <digit>;
+}
+
+<space>;
+
+capture color {
+  either {
+    "red";
+    "green";
+    "blue";
+  }
+}
+
+capture end {
+  either {
+    <char>;
+    <end>;
+  }
+}
